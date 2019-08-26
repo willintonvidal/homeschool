@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+<title>API HOMESCHOOL</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<style>
+code {
+	color: green;
+	font-size: 20px;
+	background-color: black;
+}
+
+var {
+	color: blue;
+	font-size: 1.1rem;
+}
+
+.metodos {
+	border-top-style: dotted;
+	border-right-style: solid;
+	border-bottom-style: dotted;
+	border-left-style: solid;
+}
+</style>
+<body>
+	<h1>API HOMESCHOOL</h1>
+	<section id="centroeducativo">
+		<div class="metodos">
+			<h3>Retornar todos los datos de la tabla centro educativo</h3>
+			<span>http://localhost:8102/api/centroeducativo/getall</span> <a
+				href="http://localhost:8102/api/centroeducativo/getall">IR</a>
+		</div>
+		<div class="metodos">
+			<h3>Insertar datos en la tabla centro educativo metodo POST</h3>
+			<span>http://localhost:8102/api/centroeducativo/insertar</span>
+			<br>
+			<code> { 
+						"nit":"12121223", 
+						"nombre":"Liceo alejandro de Humbold", 
+						"ciudad":"Popayán", 
+						"telefono":"3155352902",
+						"direccion":"CRA SEGUNDA"
+					}
+			 </code>
+		</div>
+		<div class="metodos">
+			<h3>Actualizar datos en la tabla centro educativo metodo PUT</h3>
+			<span>http://localhost:8102/api/centroeducativo/actualizar</span>
+			<br>
+			<code> { 
+						"nit":"12121223", 
+						"nombre":"Liceo alejandro de Humbold 2", 
+						"ciudad":"Popayán 2", 
+						"telefono":"no tiene",
+						"direccion":"Vereda"
+					}
+			 </code>
+		</div>
+		<div class="metodos">
+			<h3>Eliminar datos en la tabla centro educativo metodo DELETE</h3>
+			<span>http://localhost:8102/api/centroeducativo/eliminar/12121223999</span>
+			
+		</div>
+	</section>
+</body>
+</html>

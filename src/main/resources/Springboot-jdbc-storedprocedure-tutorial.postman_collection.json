@@ -1,0 +1,86 @@
+{
+	"info": {
+		"_postman_id": "ded5ea92-b9c6-4618-950f-f48b3c5e40af",
+		"name": "Springboot-jdbc-storedprocedure-tutorial",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all employees",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8102/api/employee/getall",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8102",
+					"path": [
+						"api",
+						"employee",
+						"getall"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get employees count by employee designation",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8102/api/employee/count/Lead",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8102",
+					"path": [
+						"api",
+						"employee",
+						"count",
+						"Lead"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get employees by department name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8102/api/employee/department/Technology",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8102",
+					"path": [
+						"api",
+						"employee",
+						"department",
+						"Technology"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
