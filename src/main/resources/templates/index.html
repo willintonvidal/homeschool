@@ -6,6 +6,7 @@
 <title>API HOMESCHOOL</title>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 <style>
 code {
@@ -27,8 +28,10 @@ var {
 }
 </style>
 <body>
+
 	<h1>API HOMESCHOOL</h1>
-	<section id="centroeducativo">
+	<section id="centroeducativo" class="p-3 mb-2 bg-secondary text-white">
+	<h2>TABLA CENTRO_EDUCATIVO</h2>
 		<div class="metodos">
 			<h3>Retornar todos los datos de la tabla centro educativo</h3>
 			<span>http://localhost:8102/api/centroeducativo/getall</span> <a
@@ -38,27 +41,25 @@ var {
 			<h3>Insertar datos en la tabla centro educativo metodo POST</h3>
 			<span>http://localhost:8102/api/centroeducativo/insertar</span>
 			<br>
-			<code> { 
-						"nit":"12121223", 
-						"nombre":"Liceo alejandro de Humbold", 
-						"ciudad":"Popayán", 
-						"telefono":"3155352902",
-						"direccion":"CRA SEGUNDA"
-					}
-			 </code>
+			<pre> 
+					{"nit":"12121223", 
+					"nombre":"Liceo alejandro de Humbold", 
+					"ciudad":"Popayán", 
+					"telefono":"3155352902",
+					"direccion":"CRA SEGUNDA"}
+			 </pre>
 		</div>
 		<div class="metodos">
 			<h3>Actualizar datos en la tabla centro educativo metodo PUT</h3>
 			<span>http://localhost:8102/api/centroeducativo/actualizar</span>
 			<br>
-			<code> { 
-						"nit":"12121223", 
-						"nombre":"Liceo alejandro de Humbold 2", 
-						"ciudad":"Popayán 2", 
-						"telefono":"no tiene",
-						"direccion":"Vereda"
-					}
-			 </code>
+			<pre> 
+					{"nit":"12121223", 
+				   	"nombre":"Liceo alejandro de Humbold 2", 
+					"ciudad":"Popayán 2", 
+					"telefono":"no tiene",
+					"direccion":"Vereda"}
+			 </pre>
 		</div>
 		<div class="metodos">
 			<h3>Eliminar datos en la tabla centro educativo metodo DELETE</h3>
@@ -66,5 +67,523 @@ var {
 			
 		</div>
 	</section>
+	
+	<section id="estudiante" class="p-3 mb-2 bg-success text-white">
+	<h2>TABLA ESTUDIANTE</h2>
+		<div class="metodos">
+			<h3>Retornar todos los datos de la tabla estudiante metodo GET</h3>
+			<span>localhost:8102/api/estudiante/getall</span> <a
+				href="localhost:8102/api/estudiante/getall">IR</a>
+		</div>
+		<div class="metodos">
+			<h3>Insertar datos en la tabla estudiante metodo POST</h3>
+			<span>http://localhost:8102/api/estudiante/insertar</span>
+			<br>
+			<pre> 
+					{"estudiante_id":1061779,
+					"acu_numero_ident":988,
+					"grado_id":2}
+			 </pre>
+		</div>
+		<div class="metodos">
+			<h3>Actualizar datos en la tabla centro educativo metodo PUT</h3>
+			<span>http://localhost:8102/api/estudiante/actualizar</span>
+			<br>
+			<pre> 
+					{"estudiante_id":1061779,
+					"acu_numero_ident":988,
+					"grado_id":2}
+			 </pre>
+		</div>
+		<div class="metodos">
+			<h3>Eliminar datos en la tabla centro educativo metodo DELETE</h3>
+			<span>http://localhost:8102/api/estudiante/eliminar/12121223999</span>
+			
+		</div>
+	</section>
+
+	<section id="TemaEstudiante" class="p-3 mb-2 bg-success text-white">
+	<h2>TABLA TEMA ESTUDIANTE</h2>
+		<div class="metodos">
+			<h3>Retornar todos los datos de la tabla tema estudiante metodo GET</h3>
+			<span>localhost:8102/api/tema_estudiante/getall</span> <a
+				href="localhost:8102/api/tema_estudiante/getall">IR</a>
+		</div>
+		<div class="metodos">
+			<h3>Insertar datos en la tabla tema estudiante metodo POST</h3>
+			<span>http://localhost:8102/api/tema_estudiante/insertar</span>
+			<br>
+			<pre> 
+					{"rel_tema_est_id":"1014",
+					"estudiante_id":"1061776",
+					"tema_id":"11338",
+					"materia_id":"1403",
+					"rel_tema_nota":"4"}
+			 </pre>
+		</div>
+		<div class="metodos">
+			<h3>Actualizar datos en la tabla tema estudiante metodo PUT</h3>
+			<span>http://localhost:8102/api/tema_estudiante/actualizar</span>
+			<br>
+			<pre> 
+					{"rel_tema_est_id":"1014",
+					"estudiante_id":"1061776",
+					"tema_id":"11338",
+					"materia_id":"1403",
+					"rel_tema_nota":"4"}
+			 </pre>
+		</div>
+		<div class="metodos">
+			<h3>Eliminar datos en la tabla tema estudiante metodo DELETE</h3>
+			<span>http://localhost:8102/api/tema_estudiante/eliminar/12121223999</span>
+			
+		</div>
+	</section>
+	
+		<section id="estudiante" class="p-3 mb-2 bg-success text-white">
+	<h2>TABLA ESTUDIANTE</h2>
+		<div class="metodos">
+			<h3>Retornar todos los datos de la tabla estudiante metodo GET</h3>
+			<span>localhost:8102/api/estudiante/getall</span> <a
+				href="localhost:8102/api/estudiante/getall">IR</a>
+		</div>
+		<div class="metodos">
+			<h3>Insertar datos en la tabla estudiante metodo POST</h3>
+			<span>http://localhost:8102/api/estudiante/insertar</span>
+			<br>
+			<pre> 
+					{"estudiante_id":1061779,
+					"acu_numero_ident":988,
+					"grado_id":2}
+			 </pre>
+		</div>
+		<div class="metodos">
+			<h3>Actualizar datos en la tabla centro educativo metodo PUT</h3>
+			<span>http://localhost:8102/api/estudiante/actualizar</span>
+			<br>
+			<pre> 
+					{"estudiante_id":1061779,
+					"acu_numero_ident":988,
+					"grado_id":2}
+			 </pre>
+		</div>
+		<div class="metodos">
+			<h3>Eliminar datos en la tabla centro educativo metodo DELETE</h3>
+			<span>http://localhost:8102/api/estudiante/eliminar/12121223999</span>
+			
+		</div>
+	</section>
+
+	<section id="Acudiente" class="p-3 mb-2 bg-success text-white">
+	<h2>TABLA TEMA ACUDIENTE</h2>
+		<div class="metodos">
+			<h3>Retornar todos los datos de la tabla acudiente metodo GET</h3>
+			<span>localhost:8102/api/acudiente/getall</span> <a
+				href="localhost:8102/api/acudiente/getall">IR</a>
+		</div>
+		<div class="metodos">
+			<h3>Insertar datos en la tabla acudiente metodo POST</h3>
+			<span>localhost:8102/api/acudiente/insertar</span>
+			<br>
+			<pre> 
+					{"acudiente_tipo_ident":"Cedula",
+					"acu_numero_ident":"992",
+					"acu_nombre_completo":"Wilinton Vidal",
+					"ecudiente_email":"willinton@gmail.com",
+					"acudiente_telefono":"3155352902"}
+			 </pre>
+		</div>
+		<div class="metodos">
+			<h3>Actualizar datos en la tabla acudiente metodo PUT</h3>
+			<span>localhost:8102/api/acudiente/actualizar</span>
+			<br>
+			<pre> 
+					{"acudiente_tipo_ident":"Cedula",
+					"acu_numero_ident":"992",
+					"acu_nombre_completo":"Wilinton",
+					"ecudiente_email":"willinton@gmail.com",
+					"acudiente_telefono":"3155"}
+			 </pre>
+		</div>
+		<div class="metodos">
+			<h3>Eliminar datos en la tabla acudiente metodo DELETE</h3>
+			<span>localhost:8102/api/acudiente/eliminar/992</span>
+			
+		</div>
+	</section>
+		
+
+
+
+<section id="Actividad_Evaluativa" class="p-3 mb-2 bg-success text-white">
+	<h2>TABLA ACTIVIDAD EVALUATIVA</h2>
+		<div class="metodos">
+			<h3>Retornar todos los datos de la tabla actividad evaluativa metodo GET</h3>
+			<span>localhost:8102/api/actividad_evaluativa/getall</span> <a
+				href="localhost:8102/api/actividad_evaluativa/getall">IR</a>
+		</div>
+		<div class="metodos">
+			<h3>Insertar datos en la actividad evaluativa metodo POST</h3>
+			<span>localhost:8102/api/actividad_evaluativa/actualizar</span>
+			<br>
+			<pre> 
+					{"actividad_eva_id":"545410",
+					"tema_id":"11339",
+					"materia_id":"1404",
+					"actividad_eva_nombre":"Es una prueba con postman",
+					"actividad_fecha_inicio":"12/02/19",
+					"actividad_eva_fin":"12/03/19",
+					"actividad_eva_":"Es una observacion",
+					"actividad_eva_foto":"Aun no tiene"}
+			 </pre>
+		</div>
+		<div class="metodos">
+			<h3>Actualizar datos en la tabla actividad evaluativa metodo PUT</h3>
+			<span></span>
+			<br>
+			<pre> 
+					{"actividad_eva_id":"545410",
+					"tema_id":"11339",
+					"materia_id":"1404",
+					"actividad_eva_nombre":"Es una prueba con postman",
+					"actividad_fecha_inicio":"12/02/19",
+					"actividad_eva_fin":"12/03/19",
+					"actividad_eva_":"Es una observacion",
+					"actividad_eva_foto":"Aun no tiene"}
+			 </pre>
+		</div>
+		<div class="metodos">
+			<h3>Eliminar datos en la tabla actividad evaluativa metodo DELETE</h3>
+			<span>localhost:8102/api/actividad_evaluativa/eliminar/545410</span>	
+		</div>
+	</section>
+
+
+<section id="Actividad_Estudiante" class="p-3 mb-2 bg-success text-white">
+	<h2>TABLA ACTIVIDAD ESTUDIANTE</h2>
+		<div class="metodos">
+			<h3>Retornar todos los datos de la tabla actividad estudiante metodo GET</h3>
+			<span>localhost:8102/api/actividad_estudiante/getall</span> <a
+				href="localhost:8102/api/actividad_estudiante/getall">IR</a>
+		</div>
+		<div class="metodos">
+			<h3>Insertar datos en la actividad estudiante metodo POST</h3>
+			<span>localhost:8102/api/actividad_estudiante/actualizar</span>
+			<br>
+			<pre> 
+					{"rel_act_est_id":"99943",
+					"estudiante_id":"1061775",
+					"actividad_eva_id":"54549",
+					"tema_id":"11339",
+					"materia_id":"1404",
+					"rel_actividad_nota":"5"}
+			 </pre>
+		</div>
+		<div class="metodos">
+			<h3>Actualizar datos en la tabla actividad estudiante metodo PUT</h3>
+			<span></span>
+			<br>
+			<pre> 
+					{"rel_act_est_id":"99943",
+					"estudiante_id":"1061775",
+					"actividad_eva_id":"54549",
+					"tema_id":"11339",
+					"materia_id":"1404",
+					"rel_actividad_nota":"6"}
+			 </pre>
+		</div>
+		<div class="metodos">
+			<h3>Eliminar datos en la tabla actividad estudiante metodo DELETE</h3>
+			<span>localhost:8102/api/actividad_estudiante/eliminar/99943</span>	
+		</div>
+	</section>
+	
+	<!-- Matricula -->
+	
+	<section id="Actividad_Matricula" class="p-3 mb-2 bg-success text-white">
+	<h2>TABLA  Matricula </h2>
+		<div class="metodos">
+			<h3>Retornar todos los datos de la tabla matricula metodo GET</h3>
+			<span>http://localhost:8102/api/matricula/getall</span> <a
+				href="http://localhost:8102/api/matricula/getall">IR</a>
+		</div>
+		<div class="metodos">
+			<h3>Insertar datos en la tabla matricula metodo POST</h3>
+			<span>http://localhost:8102/api/matricula/insertar</span>
+			<br>
+			<pre> 
+					{ "matri_id":"1039", "est_id":"1061774", "mat_id":"1403", "matri_fecha_inicio":"12-04-2010", "matri_fecha_fin":"13-05-2019", 
+                    "matri_estado":"Activo", "matri_not_final":"3"}
+
+			 </pre>
+		</div>
+		<div class="metodos">
+			<h3>Actualizar datos en la tabla matricula metodo PUT</h3>
+			<span>http://localhost:8102/api/matricula/actualizar</span>
+			<br>
+			<pre> 
+					{ "matri_id":"1039", "est_id":"1061774", "mat_id":"1403", "matri_fecha_inicio":"12-04-2019", "matri_fecha_fin":"13-05-2019", 
+                     "matri_estado":"Activo", "matri_not_final":"5"}
+
+			 </pre>
+		</div>
+		<div class="metodos">
+			<h3>Eliminar datos en la tabla matricula metodo DELETE</h3>
+			<span>http://localhost:8102/api/matricula/eliminar/1039</span>	
+		</div>
+	</section>
+	<!-- termina matricula -->
+	
+	<!-- Grado --> 
+		<section id="Actividad_Grado" class="p-3 mb-2 bg-success text-white">
+			<h2>TABLA  grado </h2>
+		<div class="metodos">
+			<h3>Retornar todos los datos de la tabla grado metodo GET</h3>
+			<span>http://localhost:8102/api/grado/getall</span> <a
+				href="http://localhost:8102/api/grado/getall">IR</a>
+		</div>
+		<div class="metodos">
+			<h3>Insertar datos en la tabla grado metodo POST</h3>
+			<span>http://localhost:8102/api/grado/insertar</span>
+			<br>
+			<pre> 
+					{ "id":"4", "nombre":"cuarto"}
+
+			 </pre>
+		</div>
+		<div class="metodos">
+			<h3>Actualizar datos en la tabla grado metodo PUT</h3>
+			<span>http://localhost:8102/api/grado/actualizar</span>
+			<br>
+			<pre> 
+					{ "id":"4", "nombre":"quinto"}
+			 </pre>
+		</div>
+		<div class="metodos">
+			<h3>Eliminar datos en la tabla matricula metodo DELETE</h3>
+			<span>http://localhost:8102/api/grado/eliminar/4</span>	
+		</div>
+	</section>
+	<!-- Termina Grado -->
+	
+	<!-- Usuario --> 
+		<section id="Actividad_usuario" class="p-3 mb-2 bg-success text-white">
+			<h2>TABLA  USUARIO </h2>
+		<div class="metodos">
+			<h3>Retornar todos los datos de la tabla Usuario metodo GET</h3>
+			<span>http://localhost:8102/api/usuario/getall</span> <a
+				href="http://localhost:8102/api/usuario/getall">IR</a>
+		</div>
+		<div class="metodos">
+			<h3>Insertar datos en la tabla usuario metodo POST</h3>
+			<span>http://localhost:8102/api/usuario/insertar</span>
+			<br>
+			<pre> 
+				{ "usu_id":"15678", "cen_edu_nit":"1065", "usu_tipo_documento":"cedula", "usu_nombres":"Alexandra", "usu_apellidos":"Pino","usu_tipo_usuario":"estudiante", "usu_contrasenia":"paola", "usu_estado":"estudy", "usu_email":"nuevo", "usu_telefono":"3455", "usu_foto":"hgi"}
+
+
+			 </pre>
+		</div>
+		<div class="metodos">
+			<h3>Actualizar datos en la tabla usuario metodo PUT</h3>
+			<span>http://localhost:8102/api/usuario/actualizar</span>
+			<br>
+			<pre> 
+					{ "usu_id":"15678", "cen_edu_nit":"1065", "usu_tipo_documento":"Tarjeta de identidad", "usu_nombres":"Paola", "usu_apellidos":"Pino","usu_tipo_usuario":"estudiante", "usu_contrasenia":"paola", "usu_estado":"estudy", "usu_email":"nuevo", "usu_telefono":"3455", "usu_foto":"hgi"}
+
+
+			 </pre>
+		</div>
+		<div class="metodos">
+			<h3>Eliminar datos en la tabla usuario metodo DELETE</h3>
+			<span>http://localhost:8102/api/usuario/eliminar/15678</span>	
+		</div>
+	</section>
+	<!-- Termina Usuario -->
+	
+	<!-- Profesor--> 
+	<section id="Actividad_usuario" class="p-3 mb-2 bg-success text-white">
+			<h2>TABLA  PROFESOR </h2>
+		<div class="metodos">
+			<h3>Retornar todos los datos de la tabla profesor metodo GET</h3>
+			<span>http://localhost:8102/api/profesor/getall</span> <a
+				href="http://localhost:8102/api/profesor/getall">IR</a>
+		</div>
+		<div class="metodos">
+			<h3>Insertar datos en la tabla profesor metodo POST</h3>
+			<span>http://localhost:8102/api/profesor/insertar</span>
+			<br>
+			<pre> 
+				{ "id_prof":"1061780", "titulo_prof":"Ingeniero de minas", "experiencia_laboral_prof":"3 años"}
+
+
+			 </pre>
+		</div>
+		<div class="metodos">
+			<h3>Actualizar datos en la tabla profesor metodo PUT</h3>
+			<span>http://localhost:8102/api/profesor/actualizar</span>
+			<br>
+			<pre> 
+					{ "id_prof":"1061780", "titulo_prof":"Ingeniero de sistemas"experiencia_laboral_prof":"2 años"}
+
+			 </pre>
+		</div>
+		<div class="metodos">
+			<h3>Eliminar datos en la tabla profesor metodo DELETE</h3>
+			<span>http://localhost:8102/api/profesor/eliminar/1061780</span>	
+		</div>
+	</section>
+	
+	
+	<!-- Termina profesor-->
+	<!-- Tema-->
+		<section id="Actividad_tema" class="p-3 mb-2 bg-success text-white">
+			<h2>TABLA  TEMA </h2>
+		<div class="metodos">
+			<h3>Retornar todos los datos de la tabla tema metodo GET</h3>
+			<span>http://localhost:8102/api/tema/getall</span> <a
+				href="http://localhost:8102/api/tema/getall">IR</a>
+		</div>
+		<div class="metodos">
+			<h3>Insertar datos en la tabla tema metodo POST</h3>
+			<span>http://localhost:8102/api/tema/insertar</span>
+			<br>
+			<pre> 
+				{ "tem_id":"9016", "mat_id":"1405","tem_nombre":"resta", "tem_descripcion":"restas de numeros", "tem_foto":"677", "tem_material_archivo":" efwef", "tem_material_video": "sfsfsf" }
+
+
+			 </pre>
+		</div>
+		<div class="metodos">
+			<h3>Actualizar datos en la tabla tema metodo PUT</h3>
+			<span>ttp://localhost:8102/api/tema/actualizar</span>
+			<br>
+			<pre> 
+					{ "tem_id":"9016", "mat_id":"1405","tem_nombre":"sumas", "tem_descripcion":"suma de numeros", "tem_foto":"677", "tem_material_archivo":" efwef", "tem_material_video": "sfsfsf" }
+
+			 </pre>
+		</div>
+		<div class="metodos">
+			<h3>Eliminar datos en la tabla tema metodo DELETE</h3>
+			<span>http://localhost:8102/api/tema/eliminar/9016</span>	
+		</div>
+	</section>
+	
+	 <!-- termina tema -->
+	 
+	 
+	<!-- Materia-->
+	
+	<section id="Actividad_materia" class="p-3 mb-2 bg-success text-white">
+	<h2>TABLA  TEMA </h2>
+		<div class="metodos">
+			<h3>Retornar todos los datos de la tabla materia metodo GET</h3>
+			<span>hhttp://localhost:8102/api/materia/getall</span> <a
+				href="http://localhost:8102/api/materia/getall">IR</a>
+		</div>
+		<div class="metodos">
+			<h3>Insertar datos en la tabla materia metodo POST</h3>
+			<span>http://localhost:8102/api/materia/insertar</span>
+			<br>
+			<pre> 
+				{ "mat_id":"1406", "mat_nombre":"Frances", "gra_id":"2", "prof_id":"1061777"}
+
+
+			 </pre>
+		</div>
+		<div class="metodos">
+			<h3>Actualizar datos en la tabla materia metodo PUT</h3>
+			<span>http://localhost:8102/api/materia/actualizar</span>
+			<br>
+			<pre> 
+				{ "mat_id":"1406", "mat_nombre":"portuguez", "gra_id":"2", "prof_id":"1061777"}
+
+			 </pre>
+		</div>
+		<div class="metodos">
+			<h3>Eliminar datos en la tabla materia metodo DELETE</h3>
+			<span>http://localhost:8102/api/materia/eliminar/1406</span>	
+		</div>
+	</section>
+	
+	
+	 <!-- termina Materis -->
+		
+<br>
+<br>
+<h1>Nuevos cambios 2 de septiembre de 2019</h1>
+	
+	<section id="gradosasignados" class="p-3 mb-2 bg-info text-white">
+	<h2>TABLA  PROFESOR </h2>
+		<div class="metodos">
+			<h3>Retornas todos los grados asignados a un profesor metodo GET</h3>
+			<span>http://localhost:8102/api/profesor/gradosasignados/1061777</span> <a
+				href="http://localhost:8102/api/profesor/gradosasignados/1061777">IR</a>
+		</div>
+	</section>
+	
+	<section id="recuperaremail" class="p-3 mb-2 bg-info text-white">
+	<h2>TABLA  USUARIO </h2>
+		<div class="metodos">
+			<h3>Recuperar email metodo POST</h3>
+			<span>localhost:8102/api/email/</span>
+			<pre>
+			
+			{
+			"email":"wjaniervalvarez2@misena.edu.co"
+			}
+			
+			</pre>
+		</div>
+	</section>
+
+	
+	<section id="recuperaremail" class="p-3 mb-2 bg-info text-white">
+	<h2>TABLA  USUARIO </h2>
+		<div class="metodos">
+			<h3>iniciar sesion metodo POST</h3>
+			<span>localhost:8102/api/usuario/iniciosesion</span>
+			<pre>
+			
+			{
+			"usuario_id":"2061776",
+			"usuario_contrasenia":"12345"
+			}
+			
+			
+			</pre>
+			<span>Devuelve un arreglo vacio si los datos estan incorrectos</span>
+		</div>
+	</section>
+	
+	<section id="verificarsiexisteunusuario" class="p-3 mb-2 bg-info text-white">
+	<h2>TABLA  USUARIO </h2>
+		<div class="metodos">
+			<h3>Verificar si existe un usuario con el id metodo GET</h3>
+			<span>localhost:8102/api/usuario/verificarusuario/106177</span>
+			<br>
+			<span>Devuelve true o false</span>
+		</div>
+	</section>
+	
+	<section id="validarusuario" class="p-3 mb-2 bg-info text-white">
+	<h2>TABLA  USUARIO </h2>
+		<div class="metodos">
+			<h3>Validar usuarios con el id metodo GET</h3>
+			<span>localhost:8102/api/usuario/validarusuario/1061775</span>
+			<br>
+		</div>
+	</section>
+	
+	<section id="validarusuario" class="p-3 mb-2 bg-info text-white">
+	<h2>TABLA  USUARIO </h2>
+		<div class="metodos">
+			<h3>Retornar todos los usuarios que todavia no han sido validados metodo GET</h3>
+			<span>localhost:8102/api/usuario/getnovalid</span>
+			<br>
+		</div>
+	</section>
+		
+	
 </body>
 </html>
